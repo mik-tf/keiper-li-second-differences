@@ -1,0 +1,13 @@
+python-flint 0.9.0 FLINT 3.6.0 Arb (bundled in FLINT 3) prec 3000
+a_0 = [+/- 5.14e-903] (should be 0)
+lambda_1 = [0.023095708966121033814 +/- 3.11e-22]  expected 0.0230957089661210338
+c_2      = [0.04604315906 +/- 4.36e-12]  expected 0.04604316
+c_117    = [0.000200146986527 +/- 1.20e-16]  expected 2.0014698653e-4
+c_118 ball = [-0.00027104446711615290782108628656073545 +/- 1.39e-39]
+c_118 mid  = [-0.00027104446711615290782108628656073545 +/- 1.39e-39]  rad = [4.2777e-851 +/- 1.90e-856]
+inside [-2.71044467117e-4, -2.71044467115e-4]: True
+c_118 certified < 0: True
+Johansson -0.00027104446711617 contained in ball: False
+c_2..c_117 certified > 0: True (failures: [])
+lambda_1 > 0: True ; max rad of c_2..c_118: [4.2777e-851 +/- 1.90e-856]
+time 10.2s

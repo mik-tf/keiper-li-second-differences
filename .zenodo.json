@@ -1,0 +1,30 @@
+{
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "title": "Sign changes of Keiper-Li second differences",
+  "creators": [
+    {
+      "name": "Perreault, Michaël"
+    }
+  ],
+  "description": "<p>Let λ<sub>n</sub> be the Keiper-Li coefficients and c<sub>n</sub> = λ<sub>n+1</sub> − 2λ<sub>n</sub> + λ<sub>n−1</sub> their second differences, a sequence studied by Keiper in 1992, who showed that the Riemann hypothesis implies |c<sub>n</sub>| ≤ 2λ<sub>1</sub>. We study the sign of c<sub>n</sub>. We prove, without assuming the Riemann hypothesis, that c<sub>n</sub> is positive for infinitely many n and negative for infinitely many n. We also give a computer-assisted certificate, in exact interval arithmetic, that c<sub>1</sub>, ..., c<sub>117</sub> &gt; 0 and c<sub>118</sub> &lt; 0, which locates the first negative value; the value of c<sub>118</sub> agrees with an independent public table. In particular, a conjecture of Xiao that c<sub>n</sub> &gt; 0 for all n ≥ 2 first fails at n = 118 (Xiao's n = 119).</p>",
+  "keywords": [
+    "Keiper-Li coefficients",
+    "Li's criterion",
+    "Riemann zeta function",
+    "Riemann hypothesis",
+    "second differences",
+    "sign changes",
+    "interval arithmetic",
+    "computer-assisted proof"
+  ],
+  "license": "cc-by-4.0",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/mik-tf/keiper-li-second-differences",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    }
+  ],
+  "version": "1.0"
+}

@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Sign changes of Keiper-Li second differences"
+type: software
+authors:
+  - family-names: Perreault
+    given-names: Michaël
+version: "1.0"
+date-released: "2026-11-22"
+license: CC-BY-4.0
+repository-code: "https://github.com/mik-tf/keiper-li-second-differences"
+keywords:
+  - Keiper-Li coefficients
+  - Li's criterion
+  - Riemann hypothesis
