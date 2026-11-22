@@ -13,7 +13,7 @@ Paper: [note.pdf](note.pdf) (source: [note.md](note.md)). Appendix A of the note
 
 ## Rebuild the PDF
 
-`note.pdf` was built with mdtexpdf (https://github.com/apeiralia/mdtexpdf) at commit f76e9f2: `mdtexpdf convert note.md --read-metadata` (it uses pdfLaTeX). The command overwrites `note.pdf` (restore it with `git checkout note.pdf`).
+`note.pdf` was built from `note.md` with mdtexpdf, a Markdown-to-LaTeX converter (pdfLaTeX); rebuilding the PDF is optional, and the certificate code in `code/` runs on its own.
 
 ## Re-run the certificate
 
