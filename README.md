@@ -2,6 +2,8 @@
 
 Author: Michaël Perreault
 
+DOI: [10.5281/zenodo.24447746](https://doi.org/10.5281/zenodo.24447746) (all versions; v1.0 is [10.5281/zenodo.24447747](https://doi.org/10.5281/zenodo.24447747))
+
 Let lambda_n be the Keiper-Li coefficients and c_n = lambda_(n+1) - 2 lambda_n + lambda_(n-1) their second differences, a sequence studied by Keiper in 1992, who showed that the Riemann hypothesis implies |c_n| <= 2 lambda_1. We study the sign of c_n. We prove, without assuming the Riemann hypothesis, that c_n is positive for infinitely many n and negative for infinitely many n. We also give a computer-assisted certificate, in exact interval arithmetic, that c_1, ..., c_117 > 0 and c_118 < 0, which locates the first negative value; the value of c_118 agrees with an independent public table. In particular, a conjecture of Xiao that c_n > 0 for all n >= 2 first fails at n = 118 (Xiao's n = 119).
 
 Paper: [note.pdf](note.pdf) (source: [note.md](note.md)). Appendix A of the note derives the error bounds.
@@ -54,4 +56,4 @@ python3 code/make_figure_data.py out/keiperli100k20d.txt   # rewrites data/*.dat
 
 ## Cite as
 
-Perreault, M. Sign changes of Keiper-Li second differences, version 1.0. DOI: `<DOI after Zenodo deposit>`. See [CITATION.cff](CITATION.cff).
+Perreault, M. Sign changes of Keiper-Li second differences, version 1.0.1. https://doi.org/10.5281/zenodo.24447746. See [CITATION.cff](CITATION.cff).
