@@ -6,16 +6,16 @@ DOI: [10.5281/zenodo.24447746](https://doi.org/10.5281/zenodo.24447746) (all ver
 
 Let lambda_n be the Keiper-Li coefficients and c_n = lambda_(n+1) - 2 lambda_n + lambda_(n-1) their second differences, a sequence studied by Keiper in 1992, who showed that the Riemann hypothesis implies |c_n| <= 2 lambda_1. We study the sign of c_n. We prove, without assuming the Riemann hypothesis, that c_n is positive for infinitely many n and negative for infinitely many n. We also give a computer-assisted certificate, in exact interval arithmetic, that c_1, ..., c_117 > 0 and c_118 < 0, which locates the first negative value; the value of c_118 agrees with an independent public table. In particular, a conjecture of Xiao that c_n > 0 for all n >= 2 first fails at n = 118 (Xiao's n = 119).
 
-Paper: [note.pdf](note.pdf) (source: [note.md](note.md)). Appendix A of the note derives the error bounds.
+Paper: [keiper-li-second-differences.pdf](keiper-li-second-differences.pdf) (source: [note.md](note.md)). Appendix A of the note derives the error bounds.
 
 ## Licences
 
-- Text (`note.md`, `note.pdf`) and the archived certificates: CC BY 4.0, see [LICENSE-paper.md](LICENSE-paper.md).
+- Text (`note.md`, `keiper-li-second-differences.pdf`) and the archived certificates: CC BY 4.0, see [LICENSE-paper.md](LICENSE-paper.md).
 - Code in `code/` and `data/` scripts: MIT, see [LICENSE](LICENSE).
 
 ## Rebuild the PDF
 
-`note.pdf` was built from `note.md` with mdtexpdf, a Markdown-to-LaTeX converter (pdfLaTeX); rebuilding the PDF is optional, and the certificate code in `code/` runs on its own.
+The paper was built from `note.md` with mdtexpdf, a Markdown-to-LaTeX converter (pdfLaTeX); rename its output `note.pdf` to `keiper-li-second-differences.pdf`; rebuilding the PDF is optional, and the certificate code in `code/` runs on its own.
 
 ## Re-run the certificate
 
