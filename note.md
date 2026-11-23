@@ -38,7 +38,7 @@ $$
 c_n=\lambda_{n+1}-2\lambda_n+\lambda_{n-1}.
 $$
 
-The sequence $c_n$ is not new. Keiper's $\tau_m$ [1, p. 769, eqs.~(35)-(36)] is the second central difference of $m\lambda^K_m$: $\tau_m=(m+1)\lambda^K_{m+1}-2m\lambda^K_m+(m-1)\lambda^K_{m-1}$, where $\lambda^K_m=\lambda_m/m$ is his $\lambda_m$; in our notation $\tau_m=c_m$. His eq. (36) states that RH implies $|\tau_k|\le 0.04619141793224206762862$ $(=2\lambda_1)$ and that, conversely, boundedness of $|\tau_k|$ implies RH. Keiper states no sign property of $\tau_m$; he remarks only that RH implies $\lambda^K_m>0$. Xiao [2] also studies $c_n$, as the second difference of the Li coefficients (his Theorem 3.2 is the zero formula below, his Corollary 3.3 the RH bound) and makes the following conjecture, a natural question about Keiper's sequence.
+The sequence $c_n$ is not new. Keiper's $\tau_m$ [1, p. 769, eqs. (35)-(36)] is the second central difference of $m\lambda^K_m$: $\tau_m=(m+1)\lambda^K_{m+1}-2m\lambda^K_m+(m-1)\lambda^K_{m-1}$, where $\lambda^K_m=\lambda_m/m$ is his $\lambda_m$; in our notation $\tau_m=c_m$. His eq. (36) states that RH implies $|\tau_k|\le 0.04619141793224206762862$ $(=2\lambda_1)$ and that, conversely, boundedness of $|\tau_k|$ implies RH. Keiper states no sign property of $\tau_m$; he remarks only that RH implies $\lambda^K_m>0$. Xiao [2] also studies $c_n$, as the second difference of the Li coefficients (his Theorem 3.2 is the zero formula below, his Corollary 3.3 the RH bound) and makes the following conjecture, a natural question about Keiper's sequence.
 
 > **Conjecture 3.4 (Xiao [2]).** For all $n\ge 3$, one has (3.15) $\lambda_n>2\lambda_{n-1}-\lambda_{n-2}$.
 
@@ -51,7 +51,7 @@ Neither result contradicts RH or Li's criterion, which concern the sign of $\lam
 
 # Theorem 1: infinitely many signs of each kind
 
-Let $G(z)=\tfrac{\xi'}{\xi}\bigl(\tfrac{1}{1-z}\bigr)$. This is Keiper's expansion [1, eq.~(19), p. 767], $\frac{\xi'}{\xi}(1/s)=\sum_{k\ge0}\tau_k(1-s)^k$, written in the variable $z=1-s$; Keiper does not name this function.  Differentiating the defining expansion of $\lambda_n$ and multiplying by $(1-z)^2$ gives, near $z=0$,
+Let $G(z)=\tfrac{\xi'}{\xi}\bigl(\tfrac{1}{1-z}\bigr)$. This is Keiper's expansion [1, eq. (19), p. 767], $\frac{\xi'}{\xi}(1/s)=\sum_{k\ge0}\tau_k(1-s)^k$, written in the variable $z=1-s$; Keiper does not name this function.  Differentiating the defining expansion of $\lambda_n$ and multiplying by $(1-z)^2$ gives, near $z=0$,
 
 $$
 G(z)=\lambda_1+\sum_{n\ge 1}c_n z^n .
@@ -68,11 +68,16 @@ Let $c_n=\lambda_{n+1}-2\lambda_n+\lambda_{n-1}$ for $n\ge1$. Then $c_n>0$ for i
 \end{theorem}
 ```
 
+<!-- statement
+id: T1
+label: PROVED
+-->
+
 ```{=latex}
 \begin{proof}
 ```
 
-The function $G$ is meromorphic on $\mathbb{C}\setminus\{1\}$, with poles exactly at $z_\rho=1-1/\rho$, where $\rho$ runs over the nontrivial zeros, of multiplicity $m_\rho$, and
+The function $G$ is meromorphic on $\mathbb{C}\setminus\{1\}$, with poles exactly at $z_\rho=1-1/\rho$, where $\rho=\beta+i\gamma$ runs over the nontrivial zeros, of multiplicity $m_\rho$, and
 
 $$
 G(z)=\frac{m_\rho\,\rho^{-2}}{z-z_\rho}+O(1)\qquad (z\to z_\rho).
@@ -89,7 +94,7 @@ $$
 As $t\uparrow1$, the left side is at least $m_\rho/|\rho|^2\,/\,\bigl(R(1-t)\bigr)-O(1)$, where $z^*=z_\rho$. On the right side there are two cases.
 
 - If $R<1$, then $G$ is holomorphic at $R\in(0,1)$, so $G(tR)$ stays bounded.
-- If $R=1$, then $G(t)=\frac{\xi'}{\xi}(s)$ with $s=1/(1-t)\to+\infty$, and
+- If $R=1$, then $G(t)=\frac{\xi'}{\xi}(s)$ with $s=1/(1-t)\to+\infty$, and, with $\psi=\Gamma'/\Gamma$ the digamma function,
 $$
 \frac{\xi'}{\xi}(s)=\frac1s+\frac1{s-1}-\tfrac12\log\pi+\tfrac12\psi(s/2)+\frac{\zeta'}{\zeta}(s)=\tfrac12\log s+O(1),
 $$
@@ -125,7 +130,7 @@ Figure \ref{fig:circle} shows the geometry used in the proof.
 \node[font=\small,anchor=south] at (axis cs:0,1.3) {arc near $z=1$, magnified};
 \end{axis}
 \end{tikzpicture}
-\caption[Poles of $G$ and the segment $(0,1)$]{The poles $z_\rho=1-1/\rho$ of $G$ for the first ten zeros $\rho=\tfrac12+i\gamma_k$ and their conjugates (blue), computed with mpmath and drawn to scale; these lie on $|z|=1$; under RH all poles do, and $R=1$. They accumulate at $z=1$, with $\arg z_\rho\approx1/\gamma$, so the right panel magnifies the arc near $z=1$ (horizontal axis: $\arg z$). If $c_n\ge0$ for all large $n$ and $R<1$, Pringsheim's theorem would force a singularity of $G$ at $z=R\in(0,1)$, where $G$ is holomorphic (red). When $R=1$, as drawn, the proof compares the growth of $G$ near a pole with $G(t)=O(\log\frac1{1-t})$ along $(0,1)$.}\label{fig:circle}
+\caption[Poles of $G$ and the segment $(0,1)$]{The poles $z_\rho=1-1/\rho$ of $G$ for the first ten zeros $\rho=\tfrac12+i\gamma_k$ and their conjugates (blue), computed with mpmath and drawn to scale; these lie on $|z|=1$; under RH all poles do, and $R=1$. They accumulate at $z=1$, with $\arg z_\rho\approx1/\gamma$, so the right panel magnifies the arc near $z=1$ (horizontal axis: $\arg z$). If $c_n\ge0$ for all large $n$ and $R<1$, Pringsheim's theorem [14, §7.21] would force a singularity of $G$ at $z=R\in(0,1)$, where $G$ is holomorphic (red). When $R=1$, as drawn, the proof compares the growth of $G$ near a pole with $G(t)=O(\log\frac1{1-t})$ along $(0,1)$.}\label{fig:circle}
 \end{figure}
 ```
 
@@ -142,6 +147,11 @@ Conjecture 3.4 of Xiao is false.
 \end{corollary}
 ```
 
+<!-- statement
+id: C1
+label: PROVED
+-->
+
 ```{=latex}
 \begin{proof}
 ```
@@ -149,7 +159,7 @@ Conjecture 3.4 of Xiao is false.
 The conjecture asserts $c_n>0$ for all $n\ge2$, while Theorem 1 gives infinitely many $n$ with $c_n<0$. `\end{proof}`{=latex}
 
 
-The argument is the Landau oscillation template (positive coefficients force a singularity on the positive real axis, by Pringsheim's theorem) and uses only that $\xi$ is entire and positive on $[1,\infty)$, that its zeros are symmetric under $\rho\mapsto1-\bar\rho$, that it has at least one zero, and that $\frac{\xi'}{\xi}(s)=O(\log s)$ for real $s\to+\infty$. Theorem 1 says nothing about where the first negative $c_n$ occurs; this is the object of the next section.
+The argument is the Landau oscillation template (positive coefficients force a singularity on the positive real axis, by Pringsheim's theorem [14, §7.21]) and uses only that $\xi$ is entire and positive on $[1,\infty)$, that its zeros are symmetric under $\rho\mapsto1-\bar\rho$, that it has at least one zero, and that $\frac{\xi'}{\xi}(s)=O(\log s)$ for real $s\to+\infty$. Theorem 1 says nothing about where the first negative $c_n$ occurs; this is the object of the next section.
 
 # Theorem 2: the first failure is at $n=118$
 
@@ -167,6 +177,12 @@ Hence $118$ is the first index with $c_n<0$; this is index $119$ in Xiao's conve
 ```{=latex}
 \end{theorem}
 ```
+
+<!-- statement
+id: T2
+label: PROVED
+certificate: papers/li-second-differences/code/certificate_N64.json, papers/li-second-differences/code/certificate_N81.json
+-->
 
 Figure \ref{fig:cn} plots $c_n$ for $n\le300$ and Figure \ref{fig:zoom} zooms in on $n=118$.
 
@@ -252,7 +268,7 @@ The coefficient $d_1$ does not occur, so no enclosure of $\pi$ or of Euler's con
 
 **Two runs.** The run $N=64$, $M=128$ has Euler-Maclaurin bound $\approx1.867\cdot10^{-160}$ and takes about a second. A second run with $N=81$, $M=160$ (same program, other parameters) has bound $\approx1.775\cdot10^{-202}$. Both certify $c_{118}<0$, $c_n>0$ for $n\le117$, and the enclosure of Theorem 2. The computed enclosure of $c_{118}$ has width below $10^{-100}$, and $c_{118}=-0.000271044467116152907821\ldots$.
 
-**Arb cross-check.** As an independent check, a second computation by a different route (Stieltjes constants from Arb [13] via python-flint, then a power-series composition) encloses $c_{118}$ in a ball of radius below $10^{-800}$ around $-2.710444671161529\ldots\cdot10^{-4}$, inside the interval of Theorem 2, and confirms $c_2,\dots,c_{117}>0$. The script is `code/arb_crosscheck_c118.py` (10 s); it does not cover $c_1$.
+**Arb cross-check.** As an independent check, a second computation by a different route (Stieltjes constants from Arb [13] via python-flint, then a power-series composition) encloses $c_{118}$ in a ball of radius below $10^{-800}$ around $-2.710444671161529\ldots\cdot10^{-4}$, inside the interval of Theorem 2, and confirms $c_2,\dots,c_{117}>0$. The script is \texttt{arb\_\allowbreak crosscheck\_\allowbreak c118.py} (10 s); it does not cover $c_1$.
 
 **Independent agreement.** Johansson's public table of Keiper-Li coefficients to $n=10^5$ at 20 digits [5], converted to second differences of $\lambda_n$ (the table lists the Keiper normalisation, $\lambda_n=n\lambda_n^K$, and its $n=0$ entry is $-\log2$, which we replace by $\lambda_0=0$), gives $c_{116}=6.9038525546\cdot10^{-4}$, $c_{117}=2.0014698653\cdot10^{-4}$, $c_{118}=-2.7104446711617\cdot10^{-4}$ and $c_{119}=-7.2055916816\cdot10^{-4}$. The table value $-2.7104446711617\cdot10^{-4}$ lies inside the certified interval of Theorem 2 and agrees with the certified value $-2.71044467116153\cdot10^{-4}$ to 13 significant digits (the two differ in the 14th).
 
@@ -266,15 +282,15 @@ $$
 c_n=\sum_\rho w_\rho\,z_\rho^{\,n},\qquad z_\rho=1-\frac1\rho\ \text{(as in \S2)},\quad w_\rho=\frac{1}{\rho(1-\rho)}.
 $$
 
-For fixed $n$ this converges absolutely without RH: with $\rho=\beta+i\gamma$, $|z_\rho|^2=1+(1-2\beta)/|\rho|^2\le1+1/|\rho|^2$, so $|z_\rho|^n$ is bounded uniformly in $\rho$, and $\sum|\rho|^{-2}<\infty$. Under RH, $|z_\rho|=1$, $w_\rho=(1/4+\gamma^2)^{-1}>0$ and $\sum_\rho w_\rho=2\lambda_1=2+\gamma_E-\log4\pi\approx0.0461914$, whence Keiper's bound $|c_n|\le 2\lambda_1\approx0.0461914$.
+For fixed $n$ this converges absolutely without RH: writing $\rho=\beta+i\gamma$ as before, $|z_\rho|^2=1+(1-2\beta)/|\rho|^2\le1+1/|\rho|^2$, so $|z_\rho|^n$ is bounded uniformly in $\rho$, and $\sum|\rho|^{-2}<\infty$. Under RH, $|z_\rho|=1$, $w_\rho=(1/4+\gamma^2)^{-1}>0$ and $\sum_\rho w_\rho=2\lambda_1=2+\gamma_E-\log4\pi\approx0.0461914$ ($\gamma_E$ is Euler's constant), whence Keiper's bound $|c_n|\le 2\lambda_1\approx0.0461914$.
 
 Conversely, bounded $|c_n|$ implies RH [1]. Theorem 1 holds on both sides of this dichotomy.
 
-**A second proof.** Theorem 1 can also be proved by a case split. If RH fails, an eventual sign of $c_n$ would force, by Pringsheim's theorem, a singularity of $G$ at a point of $(0,1)$, which does not exist because $\xi>0$ on $[1,\infty)$. If RH holds, $c_n$ is an almost periodic sequence with positive weights $W_q=\sum_{z_\rho=q}w_\rho$ at the points $q$ of the unit circle, its Cesàro mean tends to $0$ and the mean of $c_n^2$ tends to $\sum W_q^2>0$ (Wiener's lemma for a discrete measure), which is incompatible with $0\le c_n\le2\lambda_1$ eventually. The proof in §2 avoids the case split.
+**A second proof.** Theorem 1 can also be proved by a case split. If RH fails, an eventual sign of $c_n$ would force, by Pringsheim's theorem [14, §7.21], a singularity of $G$ at a point of $(0,1)$, which does not exist because $\xi>0$ on $[1,\infty)$. If RH holds, $c_n$ is an almost periodic sequence with positive weights $W_q=\sum_{z_\rho=q}w_\rho$ at the points $q$ of the unit circle, its Cesàro mean tends to $0$ and the mean of $c_n^2$ tends to $\sum W_q^2>0$ (Wiener's lemma for a discrete measure [15, Ch. I, §7, Corollary (7.22)]), which is incompatible with $0\le c_n\le2\lambda_1$ eventually. The proof in §2 avoids the case split.
 
 **Why asymptotics do not suffice.** Under RH, $\lambda_n=\tfrac n2(\log n-1+\gamma_E-\log2\pi)+\text{error}$, with an error that is small on average: Arias de Reyna [7] shows that RH is equivalent to $\lambda^K_n=\tfrac12(\log n+\gamma_E-\log2\pi-1)+y_n$ with $(y_n)\in\ell^2$, and Voros [8] describes the oscillating remainder. The smooth part has second difference about $1/(2n)>0$, but such an error term carries no information on second differences, so Theorem 1 does not follow from these statements.
 
-**Prior art.** We searched Keiper [1] (including his eq. (35)-(36) and his Figure 1), Xiao [2], Johansson's table [5], Arias de Reyna [7], Voros [8], Bombieri-Lagarias [3], Lagarias [4], Maślanka [11] ($\lambda_n$ for about $3000$ values of $n$, a growing trend with small oscillations; nothing on second differences) and the Merlini-Sala-Sala papers [10] (numerics up to $n\le 33$). Merlini, Sala and Sala [10, arXiv:1904.07005] remark that $\varphi(n)$, the second difference of the trend-subtracted part of $\lambda_n$, changes sign at $n=13$ (for $n\le33$); this is a different quantity from $c_n$. Keiper (see §1) bounds $\tau_m$ under RH but states no sign property; Xiao conjectures $c_n>0$ (his Conjecture 3.4). None of these sources states the sign behaviour of $c_n$, so, to our knowledge, both Theorem 1 and the failure at $n=118$ are new. The search was not exhaustive. Theorem 1 uses classical methods (Landau, Pringsheim, Wiener) and is elementary; we claim no novelty beyond the statement.
+**Prior art.** We searched Keiper [1] (including his eq. (35)-(36) and his Figure 1), Xiao [2], Johansson's table [5], Arias de Reyna [7], Voros [8], Bombieri-Lagarias [3], Lagarias [4], Maślanka [11] ($\lambda_n$ for about $3000$ values of $n$, a growing trend with small oscillations; nothing on second differences) and the Merlini-Sala-Sala papers [10] (numerics up to $n\le 33$). Merlini, Sala and Sala [10, arXiv:1904.07005] remark that $\varphi(n)$, the second difference of the trend-subtracted part of $\lambda_n$, changes sign at $n=13$ (for $n\le33$); this is a different quantity from $c_n$. Keiper (see §1) bounds $\tau_m$ under RH but states no sign property; Xiao conjectures $c_n>0$ (his Conjecture 3.4). None of these sources states the sign behaviour of $c_n$, so, to our knowledge, both Theorem 1 and the failure at $n=118$ are new. The search was not exhaustive. Theorem 1 uses classical methods (Landau, Pringsheim [14], Wiener [15]) and is elementary; we claim no novelty beyond the statement.
 
 # Use of AI {-}
 
@@ -339,3 +355,7 @@ with $J=300$, and $\log n=\nu\log2+\log(n/2^\nu)$ with $1\le n/2^\nu<2$.
 [12] H. M. Edwards, *Riemann's Zeta Function*, Academic Press, 1974 (also Dover Publications).
 
 [13] F. Johansson, *Arb: efficient arbitrary-precision midpoint-radius interval arithmetic*, IEEE Trans. Comput. 66 (2017), no. 8, 1281-1292. https://doi.org/10.1109/TC.2017.2690633
+
+[14] E. C. Titchmarsh, *The Theory of Functions*, 2nd ed., Oxford University Press, 1939, §7.21 (Pringsheim's theorem).
+
+[15] Y. Katznelson, *An Introduction to Harmonic Analysis*, 3rd ed., Cambridge University Press, 2004, Ch. I, §7, Corollary (7.22) (Wiener).
