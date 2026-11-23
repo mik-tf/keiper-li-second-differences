@@ -159,7 +159,7 @@ label: PROVED
 The conjecture asserts $c_n>0$ for all $n\ge2$, while Theorem 1 gives infinitely many $n$ with $c_n<0$. `\end{proof}`{=latex}
 
 
-The argument is the Landau oscillation template (positive coefficients force a singularity on the positive real axis, by Pringsheim's theorem [14, §7.21]) and uses only that $\xi$ is entire and positive on $[1,\infty)$, that its zeros are symmetric under $\rho\mapsto1-\bar\rho$, that it has at least one zero, and that $\frac{\xi'}{\xi}(s)=O(\log s)$ for real $s\to+\infty$. Theorem 1 says nothing about where the first negative $c_n$ occurs; this is the object of the next section.
+The argument is the Landau oscillation template [16, Theorem 1.7] (positive coefficients force a singularity on the positive real axis, by Pringsheim's theorem [14, §7.21]) and uses only that $\xi$ is entire and positive on $[1,\infty)$, that its zeros are symmetric under $\rho\mapsto1-\bar\rho$, that it has at least one zero, and that $\frac{\xi'}{\xi}(s)=O(\log s)$ for real $s\to+\infty$. Theorem 1 says nothing about where the first negative $c_n$ occurs; this is the object of the next section.
 
 # Theorem 2: the first failure is at $n=118$
 
@@ -290,7 +290,7 @@ Conversely, bounded $|c_n|$ implies RH [1]. Theorem 1 holds on both sides of thi
 
 **Why asymptotics do not suffice.** Under RH, $\lambda_n=\tfrac n2(\log n-1+\gamma_E-\log2\pi)+\text{error}$, with an error that is small on average: Arias de Reyna [7] shows that RH is equivalent to $\lambda^K_n=\tfrac12(\log n+\gamma_E-\log2\pi-1)+y_n$ with $(y_n)\in\ell^2$, and Voros [8] describes the oscillating remainder. The smooth part has second difference about $1/(2n)>0$, but such an error term carries no information on second differences, so Theorem 1 does not follow from these statements.
 
-**Prior art.** We searched Keiper [1] (including his eq. (35)-(36) and his Figure 1), Xiao [2], Johansson's table [5], Arias de Reyna [7], Voros [8], Bombieri-Lagarias [3], Lagarias [4], Maślanka [11] ($\lambda_n$ for about $3000$ values of $n$, a growing trend with small oscillations; nothing on second differences) and the Merlini-Sala-Sala papers [10] (numerics up to $n\le 33$). Merlini, Sala and Sala [10, arXiv:1904.07005] remark that $\varphi(n)$, the second difference of the trend-subtracted part of $\lambda_n$, changes sign at $n=13$ (for $n\le33$); this is a different quantity from $c_n$. Keiper (see §1) bounds $\tau_m$ under RH but states no sign property; Xiao conjectures $c_n>0$ (his Conjecture 3.4). None of these sources states the sign behaviour of $c_n$, so, to our knowledge, both Theorem 1 and the failure at $n=118$ are new. The search was not exhaustive. Theorem 1 uses classical methods (Landau, Pringsheim [14], Wiener [15]) and is elementary; we claim no novelty beyond the statement.
+**Prior art.** We searched Keiper [1] (including his eq. (35)-(36) and his Figure 1), Xiao [2], Johansson's table [5], Arias de Reyna [7], Voros [8], Bombieri-Lagarias [3], Lagarias [4], Maślanka [11] ($\lambda_n$ for about $3000$ values of $n$, a growing trend with small oscillations; nothing on second differences) and the Merlini-Sala-Sala papers [10] (numerics up to $n\le 33$). Merlini, Sala and Sala [10, arXiv:1904.07005] remark that $\varphi(n)$, the second difference of the trend-subtracted part of $\lambda_n$, changes sign at $n=13$ (for $n\le33$); this is a different quantity from $c_n$. Keiper (see §1) bounds $\tau_m$ under RH but states no sign property; Xiao conjectures $c_n>0$ (his Conjecture 3.4). None of these sources states the sign behaviour of $c_n$, so, to our knowledge, both Theorem 1 and the failure at $n=118$ are new. The search was not exhaustive. Theorem 1 uses classical methods (Landau [16], Pringsheim [14], Wiener [15]) and is elementary; we claim no novelty beyond the statement.
 
 # Use of AI {-}
 
@@ -358,4 +358,6 @@ with $J=300$, and $\log n=\nu\log2+\log(n/2^\nu)$ with $1\le n/2^\nu<2$.
 
 [14] E. C. Titchmarsh, *The Theory of Functions*, 2nd ed., Oxford University Press, 1939, §7.21 (Pringsheim's theorem).
 
-[15] Y. Katznelson, *An Introduction to Harmonic Analysis*, 3rd ed., Cambridge University Press, 2004, Ch. I, §7, Corollary (7.22) (Wiener).
+[15] Y. Katznelson, *An Introduction to Harmonic Analysis*, 3rd ed., Cambridge University Press, 2004 (Cambridge Mathematical Library), Ch. I, §7, Corollary (7.22) (Wiener).
+
+[16] H. L. Montgomery and R. C. Vaughan, *Multiplicative Number Theory I. Classical Theory*, Cambridge University Press, 2007, Theorem 1.7 (Landau: a Dirichlet series with nonnegative coefficients has a singularity at the real point of its abscissa of convergence).
