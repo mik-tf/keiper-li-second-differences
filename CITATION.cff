@@ -5,9 +5,9 @@ type: software
 authors:
   - family-names: Perreault
     given-names: Michaël
-version: "1.0.3"
+version: "1.0.4"
 doi: "10.5281/zenodo.24447746"
-date-released: "2026-11-23"
+date-released: "2026-11-24"
 license: CC-BY-4.0
 repository-code: "https://github.com/mik-tf/keiper-li-second-differences"
 keywords:

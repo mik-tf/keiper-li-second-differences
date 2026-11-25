@@ -1,7 +1,7 @@
 ---
 title: "Sign changes of Keiper-Li second differences"
 author: "Michaël Perreault"
-date: "2026-11-23"
+date: "2026-11-24"
 format: "article"
 toc: false
 header_footer_policy: "all"
@@ -294,7 +294,7 @@ Conversely, bounded $|c_n|$ implies RH [1]. Theorem 1 holds on both sides of thi
 
 # Use of AI {-}
 
-ChatGPT 5.6 (OpenAI) was used in September 2026 for exploration, in which the main results were first found. Claude Opus 5.5 and Claude Sonnet 5.5 (Anthropic) were used in November 2026 for checking, literature search and drafting.
+ChatGPT 5.6 (OpenAI) was used in September 2026, under the author's direction, for exploratory computation. Claude Opus 5.5 and Claude Sonnet 5.5 (Anthropic) were used in November 2026, under the author's direction, for checks, literature search and drafting.
 
 # Appendix A: the error bounds {-}
 
