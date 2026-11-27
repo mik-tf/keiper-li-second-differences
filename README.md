@@ -56,4 +56,4 @@ python3 code/make_figure_data.py out/keiperli100k20d.txt   # rewrites data/*.dat
 
 ## Cite as
 
-Perreault, M. Sign changes of Keiper-Li second differences, version 1.0.4. https://doi.org/10.5281/zenodo.24447746. See [CITATION.cff](CITATION.cff).
+Perreault, M. Sign changes of Keiper-Li second differences, version 1.0.5. https://doi.org/10.5281/zenodo.24447746. See [CITATION.cff](CITATION.cff).
